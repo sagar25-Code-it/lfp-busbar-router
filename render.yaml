@@ -1,0 +1,13 @@
+# Render Blueprint for PS3D Hub — Series / Parallel Bus Bar Router
+# This describes a free static site deploy. Push this file to your repo root,
+# then in Render click "New +" -> "Blueprint" and point it at the repo.
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: ps3d-hub-busbar-router
+    runtime: static
+    buildCommand: echo "No build needed - static HTML site"
+    staticPublishPath: ./
+    region: singapore          # closest Render region to Bengaluru, India
+    autoDeployTrigger: commit  # redeploy automatically on every push to main
