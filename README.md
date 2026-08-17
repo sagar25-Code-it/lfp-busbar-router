@@ -1,97 +1,91 @@
-# Series / Parallel Bus Bar Router
-### by PS3D Hub
+# PS3D Master LFP Busbar Router
 
-A free, browser-based layout tool for planning the copper bus bar wiring of large-format LiFePO4 battery packs — before you cut a single piece of copper.
+PS3D Master LFP Busbar Router is a browser-based tool for planning Lithium Iron Phosphate battery cell layouts, series/parallel connections, busbar routing, and basic electrical checks.
 
----
+It helps you create a pack layout, connect cells visually, estimate total output, and check whether busbar routing is clean before moving to real mechanical or electrical design.
 
-## 1. Tool Description
+## How To Use
 
-This tool lets you lay out a grid of prismatic battery cells (the default is tuned for the common 3.2 V / 280 Ah class of cells), wire them into a series/parallel pack either by hand or automatically, and watch it calculate the electrical result in real time — pack voltage, capacity, energy, current limits, and the physical bus bar specs needed to carry that current safely.
+1. Open the tool in your browser.
+2. Set the pack layout using row and column controls.
+3. Add or remove cells as needed.
+4. Enter the cell details:
+   - Nominal voltage per cell
+   - Capacity per cell in Ah
+   - Cell max current
+   - Design current
+   - Busbar width
+   - Busbar thickness
+5. Click **Auto Series** to generate automatic busbar connections.
+6. Use **Best Cost Layout** to let the tool choose a shorter routing layout for the active cell count.
+7. Click any cell terminal to manually create a busbar connection.
+8. Drag a busbar line to adjust its route manually.
+9. Use each cell's **Flip** button to swap that cell's polarity.
+10. Use the always-visible row and column buttons to flip a full row or column at one time.
+11. Connect final output to the bottom main positive and negative terminals.
+12. Check the output and electrical result panels before using the design.
 
-It runs entirely in your browser. There's no install, no login, no backend server, and no data ever leaves your device — everything from the routing engine to the electrical math is plain HTML, CSS, and JavaScript.
+## Special Features
 
-## 2. Use
+- Responsive PS3D Master light-theme engineering interface.
+- Branded header with direct owner portfolio, LinkedIn, Instagram, and email actions.
+- Highlighted Sagar Patel owner profile and online CV callout.
+- Auto-scrolling PS3D engineering tool suite in the marketing footer.
+- Custom cell layout with adjustable rows and columns.
+- Add, remove, restore, and rearrange active battery cells.
+- Automatic series connection without changing cell position.
+- Cell terminal flip while keeping the terminal physical position stable.
+- Always-visible row and column terminal flip buttons for faster layout editing.
+- Automatic busbar endpoint rearrangement after a cell, row, or column flip.
+- Manual busbar creation by clicking terminals.
+- Draggable busbar routing lines for final route adjustment.
+- Target topology input such as `36S1P`.
+- Stronger topology validation from main negative to main positive.
+- Validation panel for topology, route clearance, output readiness, and paid pending items.
+- Project JSON save/load.
+- Route CSV export.
+- Technician build sheet CSV export.
+- Annotated layout SVG export.
+- Print-ready engineering report export for PDF generation.
+- Smart routing that tries to avoid terminal and busbar overlap.
+- Outside-layout routing for bend connections and main terminal output routing.
+- Straight/direct routing for nearby cell-to-cell connections when clear.
+- Red and black color-coded main output connection lines.
+- Bottom dummy main positive and negative terminals for final pack output.
+- Layout optimizer for shorter, more cost-effective routing.
+- Live pack output calculation:
+  - Series count
+  - Parallel count
+  - Pack voltage
+  - Pack capacity in Ah
+  - Estimated energy in Wh
+- Electrical check calculation:
+  - Max pack current
+  - Design C-rate
+  - Estimated busbar length
+  - Busbar resistance
+  - Voltage drop
+  - Busbar heat loss
+  - Estimated copper mass
+  - Routing status and overlap warning
 
-1. **Set your grid** — choose columns (1–8) and rows (1–20) under *Pack Layout*, or pick a ready-made shape (3×12 slim, 4×9 balanced, 6×6 shortest, 2×18 service lane, 8×5 wide) under *Layout Optimizer*. "Best Cost Layout" scans shapes for you and picks the cheapest one to wire.
-2. **Remove any cells you don't need** by clicking the × on them — connections update automatically.
-3. **Wire the pack** — click *Auto Series* to route the whole pack in one go, or click two terminals manually to place a single bus bar yourself. Flip a row's orientation if your physical layout needs it.
-4. **Enter your real numbers** under *Cell Specifications* — nominal voltage, capacity, max current, your target design current, and the bus bar's width and thickness.
-5. **Read the results** — *Pack Output* gives you voltage/capacity/energy the moment your wiring forms a valid topology. *Electrical Check* tells you if your bus bar is thick enough, how hot it'll run, how much copper you'll need, and whether any bars overlap.
+## Pending Paid / Proprietary Items
 
-## 3. Benefits
+These items are listed as pending because they require licensed standards data, manufacturer datasets, or certified simulation/correlation:
 
-- **Catch mistakes on screen, not in the workshop.** Unequal string lengths, overlapping bus bars, and undersized copper all show up as warnings before you've spent a rupee on materials.
-- **Buy the right amount of copper.** The copper mass estimate is based on your actual routed length, not a guess — useful for quoting and ordering.
-- **Compare layouts in seconds.** Try 3×12 versus 6×6 versus a custom shape and see the cost/length difference instantly instead of re-wiring a real pack to find out.
-- **No spreadsheet required.** Voltage, capacity, C-rate, current density, and voltage drop are calculated for you as you design.
-- **Nothing to install.** Anyone with a link and a browser can use it — clients, collaborators, or your own team.
+- Licensed creepage and clearance lookup tables from applicable standards.
+- Certified thermal/electrical simulation solver correlation.
+- Manufacturer-specific fuse, contactor, and busbar material databases.
 
-## 4. Features
+## Important Safety Note
 
-- Adjustable pack grid, 1–8 columns × 1–20 rows, with individual cell removal/restore
-- Five one-click layout presets, plus an automatic "best cost" layout finder
-- Automatic full-pack wiring (**Auto Series**) or fully manual terminal-by-terminal wiring
-- An automatic routing engine that tries multiple path strategies per connection and keeps bus bars clear of terminals and each other
-- Per-row flip control for matching real-world cell orientation, with one-click reset
-- Undo and clear controls for the routed bus bars
-- Editable cell specs: nominal voltage, capacity (Ah), max current, and design current
-- Editable bus bar geometry: width and thickness in mm
-- Three routing preferences: cost-optimized, straight-priority, or safety-spacing
-- Live pack output: auto-detected topology badge (e.g. "16S3P"), pack voltage, capacity, and energy
-- Live electrical check: max pack current, design C-rate, bus current density, bus resistance, voltage drop, I²R heat loss, copper mass, and a route/clearance overlap check
-- Ordered route list showing exactly how the auto-router connected your pack
-- A built-in reminder that this is a **layout helper only** — high-voltage battery work should always be verified by a qualified professional before assembly
+This tool is a layout helper only. Real battery pack design can involve high current, short-circuit risk, heat generation, insulation clearance, fusing, BMS selection, vibration, enclosure design, and safety certification. Always verify the final design with a qualified battery/electrical professional before manufacturing or assembly.
 
-## 5. Goal
+## Files For Deployment
 
-To give DIY and small-scale LiFePO4 pack builders a free, no-install way to *see* their wiring plan and its electrical consequences before assembly — so fewer packs get built with mismatched strings, undersized bus bars, or wiring that only made sense on paper.
+- `index.html` - main web app
+- `ps3d-brand-logo.webp` - optimized PS3D Master brand mark
+- `render.yaml` - Render static-site deployment configuration
+- `.gitignore` - common ignored files
 
----
-
-## 6. Instructions — Deploying This Site (GitHub + Render)
-
-This is a static site (just `index.html` — no server, no database), so it deploys in a few minutes on Render's free static site hosting.
-
-### Step 1 — Put the files in a GitHub repository
-
-1. Go to [github.com](https://github.com) and sign in (or create a free account).
-2. Click the **+** in the top-right corner → **New repository**.
-3. Name it something like `ps3d-hub-busbar-router`. Choose **Public** or **Private** — either works with Render. Leave "Add a README file" **unchecked** (we're supplying our own). Click **Create repository**.
-4. On the new, empty repo's page, click **uploading an existing file**.
-5. Drag in all four files from this folder: `index.html`, `README.md`, `render.yaml`, and `.gitignore`.
-6. Scroll down and click **Commit changes**.
-
-That's it — no command line needed.
-
-### Step 2 — Deploy on Render
-
-1. Go to [render.com](https://render.com) and sign in — **"Sign in with GitHub"** is the fastest option since it connects your account automatically.
-2. Click **New +** → **Static Site**.
-3. Choose the repository you just created (authorize Render to access it if asked) and click **Connect**.
-4. Fill in the form:
-   - **Name**: anything you like — this becomes part of your free `.onrender.com` web address.
-   - **Branch**: `main`
-   - **Build Command**: `echo "No build needed - static HTML site"`
-   - **Publish Directory**: `.`
-5. Click **Create Static Site**.
-
-Render will run its first deploy (usually under two minutes) and give you a live URL like `https://ps3d-hub-busbar-router.onrender.com`. Every time you push a change to this GitHub repo afterward, Render automatically redeploys it — no extra steps.
-
-### Step 3 (optional) — One-click setup with the included `render.yaml`
-
-This folder already includes a `render.yaml`, which describes the exact same setup as Step 2 in code. If you'd rather skip filling in the form by hand:
-
-1. In Render, click **New +** → **Blueprint** instead of *Static Site*.
-2. Point it at your GitHub repo. Render reads `render.yaml` automatically and pre-fills everything.
-3. Click **Deploy**.
-
-### Adding your own domain later
-
-Once the site is live, Render's Settings tab lets you attach a custom domain (e.g. `busbar.ps3dhub.com`) for free — just point your domain's DNS at Render following the instructions shown there.
-
----
-
-**Maintained by PS3D Hub**
-Sagar Patel · Bengaluru, India
-📞 +91 84014 89892 · ✉️ 84014sagar@gmail.com
+Keep the HTML and logo asset together in the repository root. No paid runtime dependency is required for this static deployment.
