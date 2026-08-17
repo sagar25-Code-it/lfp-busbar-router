@@ -83,9 +83,9 @@ This tool is a layout helper only. Real battery pack design can involve high cur
 
 ## Files For Deployment
 
-- `index.html` - main web app
-- `ps3d-brand-logo.webp` - optimized PS3D Master brand mark
+- `public/index.html` - main web app
+- `public/ps3d-brand-logo.webp` - optimized PS3D Master brand mark
 - `render.yaml` - Render static-site deployment configuration
 - `.gitignore` - common ignored files
 
-Keep the HTML and logo asset together in the repository root. No paid runtime dependency is required for this static deployment.
+Upload the complete package so the HTML and logo asset remain together. No paid runtime dependency is required for this static deployment.
