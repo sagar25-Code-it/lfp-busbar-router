@@ -1,6 +1,6 @@
-# PS3D Master LFP Busbar Router
+# PS3D LFP Busbar Designer
 
-PS3D Master LFP Busbar Router is a browser-based tool for planning Lithium Iron Phosphate battery cell layouts, series/parallel connections, busbar routing, and basic electrical checks.
+PS3D LFP Busbar Designer is a browser-based battery pack layout and routing calculator for planning Lithium Iron Phosphate cell layouts, series/parallel connections, busbar routing, and electrical checks.
 
 It helps you create a pack layout, connect cells visually, estimate total output, and check whether busbar routing is clean before moving to real mechanical or electrical design.
 
@@ -85,7 +85,18 @@ This tool is a layout helper only. Real battery pack design can involve high cur
 
 - `public/index.html` - main web app
 - `public/ps3d-brand-logo.webp` - optimized PS3D Master brand mark
+- `public/robots.txt` - crawler access and sitemap location
+- `public/sitemap.xml` - canonical production URL for search indexing
 - `render.yaml` - Render static-site deployment configuration
 - `.gitignore` - common ignored files
 
 Upload the complete package so the HTML and logo asset remain together. No paid runtime dependency is required for this static deployment.
+
+## Search Identity
+
+- Official name: **PS3D LFP Busbar Designer**
+- Category: **Battery Pack Layout & Routing Calculator**
+- Canonical URL: `https://lfp-busbar-router.onrender.com/`
+- Primary branded search: `PS3D LFP Busbar Designer`
+
+After deployment, submit `https://lfp-busbar-router.onrender.com/sitemap.xml` in Google Search Console and request indexing for the canonical URL.

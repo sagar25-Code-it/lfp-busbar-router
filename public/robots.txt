@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lfp-busbar-router.onrender.com/sitemap.xml

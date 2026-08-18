@@ -3,8 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PS3D Master LFP Busbar Router for battery cell layout, automatic series routing, validation, and engineering reporting.">
-  <title>PS3D Master | LFP Busbar Router</title>
+  <meta name="description" content="Design LiFePO4 battery cell layouts, route busbars automatically, verify series/parallel topology, and estimate voltage, Ah, losses, and copper mass.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Sagar Patel">
+  <meta name="theme-color" content="#153466">
+  <link rel="canonical" href="https://lfp-busbar-router.onrender.com/">
+  <link rel="icon" href="ps3d-brand-logo.webp" type="image/webp">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="PS3D Master">
+  <meta property="og:title" content="PS3D LFP Busbar Designer | Battery Pack Routing Calculator">
+  <meta property="og:description" content="Design LiFePO4 cell layouts, route busbars, validate series/parallel topology, and calculate pack electrical results.">
+  <meta property="og:url" content="https://lfp-busbar-router.onrender.com/">
+  <meta property="og:image" content="https://lfp-busbar-router.onrender.com/ps3d-brand-logo.webp">
+  <meta property="og:image:width" content="540">
+  <meta property="og:image:height" content="360">
+  <meta property="og:image:alt" content="PS3D Master brand mark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PS3D LFP Busbar Designer | Battery Pack Routing Calculator">
+  <meta name="twitter:description" content="Design LiFePO4 cell layouts, route busbars, validate topology, and calculate pack electrical results.">
+  <meta name="twitter:image" content="https://lfp-busbar-router.onrender.com/ps3d-brand-logo.webp">
+  <title>PS3D LFP Busbar Designer | Battery Pack Routing Calculator</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://lfp-busbar-router.onrender.com/#website",
+        "url": "https://lfp-busbar-router.onrender.com/",
+        "name": "PS3D LFP Busbar Designer",
+        "alternateName": "PS3D Master LFP Busbar Routing Calculator",
+        "description": "A browser-based LiFePO4 battery pack layout, busbar routing, and electrical calculation tool.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://lfp-busbar-router.onrender.com/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://lfp-busbar-router.onrender.com/#organization",
+        "name": "PS3D Master",
+        "url": "https://sagar-portfolio-v1.vercel.app/",
+        "logo": "https://lfp-busbar-router.onrender.com/ps3d-brand-logo.webp",
+        "founder": {
+          "@id": "https://lfp-busbar-router.onrender.com/#creator"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/sagar-patel-1b6522100",
+          "https://www.instagram.com/ps3dmaster"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lfp-busbar-router.onrender.com/#creator",
+        "name": "Sagar Patel",
+        "url": "https://sagar-portfolio-v1.vercel.app/",
+        "sameAs": [
+          "https://www.linkedin.com/in/sagar-patel-1b6522100",
+          "https://www.instagram.com/ps3dmaster"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://lfp-busbar-router.onrender.com/#application",
+        "name": "PS3D LFP Busbar Designer",
+        "alternateName": [
+          "PS3D LFP Busbar Router",
+          "LFP Busbar Routing Calculator"
+        ],
+        "url": "https://lfp-busbar-router.onrender.com/",
+        "description": "Design LiFePO4 battery cell layouts, create automatic or manual busbar routes, validate series/parallel topology, and estimate pack electrical performance.",
+        "applicationCategory": "EngineeringApplication",
+        "applicationSubCategory": "Battery Pack Design",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript and a modern web browser.",
+        "softwareVersion": "2026.08.18-seo-name",
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "dateModified": "2026-08-18",
+        "creator": {
+          "@id": "https://lfp-busbar-router.onrender.com/#creator"
+        },
+        "publisher": {
+          "@id": "https://lfp-busbar-router.onrender.com/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Adjustable LiFePO4 cell layouts",
+          "Automatic and manual busbar routing",
+          "Series and parallel topology validation",
+          "Terminal and busbar clearance checks",
+          "Voltage, capacity, energy, current, voltage drop, loss, and copper mass calculations",
+          "Engineering report, SVG, JSON, and CSV exports"
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       color-scheme: light;
@@ -219,9 +319,9 @@
     <div class="brand-lockup">
       <img class="brand-logo" src="ps3d-brand-logo.webp" alt="PS3D Master - Precision CAD Design and Mechanical Services" width="112" height="75">
       <div class="brand-copy">
-        <p class="eyebrow">PS3D Master / Battery Engineering</p>
-        <h1>LFP Busbar Router</h1>
-        <p class="brand-subtitle">Cell layout, connection routing, electrical checks, and build-ready output.</p>
+        <p class="eyebrow">PS3D Master / Battery Pack Engineering</p>
+        <h1>PS3D LFP Busbar Designer</h1>
+        <p class="brand-subtitle">Battery cell layout, automatic busbar routing, electrical checks, and build-ready reports.</p>
       </div>
     </div>
     <div class="header-utility">
@@ -535,7 +635,7 @@ const BUS_CLEARANCE = 17;
 const TERMINAL_EDGE_GAP = 4;
 const COPPER_RESISTIVITY_OHM_M = 1.724e-8;
 const COPPER_DENSITY_G_CM3 = 8.96;
-const APP_VERSION = "2026.08.17-ps3d-brand-ui";
+const APP_VERSION = "2026.08.18-seo-name";
 const PENDING_PAID_ITEMS = [
   "Licensed standards tables for certified creepage/clearance lookup",
   "Certified thermal/electrical simulation solver correlation",
@@ -2611,10 +2711,10 @@ function buildReportHtml() {
     .meta{color:#617489;font-size:12px}@media print{button{display:none}body{margin:16mm}}
   `;
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>PS3D Master - LFP Busbar Router Report</title><style>${style}</style></head>
+<html lang="en"><head><meta charset="utf-8"><title>PS3D LFP Busbar Designer Report</title><style>${style}</style></head>
 <body>
 <button onclick="window.print()">Print / Save as PDF</button>
-<h1>PS3D Master - LFP Busbar Router Engineering Report</h1>
+<h1>PS3D LFP Busbar Designer Engineering Report</h1>
 <p class="meta">Generated ${escapeHtml(new Date().toLocaleString())} | App version ${escapeHtml(APP_VERSION)}</p>
 <h2>Pack Summary</h2>
 <table><tbody>${reportRowsHtml([
